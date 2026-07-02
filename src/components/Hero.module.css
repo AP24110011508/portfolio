@@ -1,0 +1,484 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 60px;
+  position: relative;
+}
+
+.container {
+  max-width: 1360px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Left Side */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.greeting {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-accent-primary);
+  letter-spacing: 0.5px;
+}
+
+.name {
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.roleContainer {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.role {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 6px;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.description {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  max-width: 640px;
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+/* CTA Buttons */
+.ctaGroup {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+  color: var(--color-bg-primary);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.3);
+}
+
+.btnSecondary {
+  background: var(--color-glass);
+  color: var(--color-text-primary);
+  border-color: var(--color-glass-border);
+}
+
+.btnSecondary:hover {
+  background: var(--color-glass-hover);
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+  transform: translateY(-2px);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-glass-border);
+}
+
+.btnGhost:hover {
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  background: var(--color-glass);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  text-align: center;
+  min-width: 100px;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.stat:hover {
+  background: var(--color-glass-hover);
+  border-color: var(--color-accent-primary);
+  transform: translateY(-4px);
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Mobile Social Links */
+.socialMobile {
+  display: none;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.socialMobile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+}
+
+.socialMobile a:hover {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  border-color: var(--color-accent-primary);
+}
+
+/* Right Side - Profile Card */
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileCard {
+  position: relative;
+  width: 340px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid var(--color-glass-border);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(20px);
+}
+
+.glowBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary), var(--color-accent-tertiary));
+  opacity: 0;
+  border-radius: 24px;
+  z-index: -1;
+  transition: opacity var(--transition-base);
+}
+
+.profileCard:hover .glowBorder {
+  opacity: 0.2;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(59,130,246,0.2) 100%);
+  pointer-events: none;
+}
+
+.profileCard:hover .profileImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.title {
+  font-size: 0.95rem;
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}
+
+.techIcons {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-glass);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  transition: all var(--transition-base);
+}
+
+.icon:hover {
+  background: var(--color-accent-primary);
+  transform: scale(1.1);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--color-glass);
+  border: 1px solid var(--color-accent-primary);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-glass-border);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-glass);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+  flex: 1;
+}
+
+.socialLinks a:hover {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  transform: translateY(-3px);
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-accent-primary);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+}
+
+.scrollIndicator:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .name {
+    font-size: 2.9rem;
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    gap: 42px;
+  }
+
+  .profileCard {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .name {
+    font-size: 2.25rem;
+  }
+
+  .role {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .profileCard {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .socialMobile {
+    display: flex;
+  }
+
+  .stats {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 100px 16px 40px;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .greeting {
+    font-size: 1rem;
+  }
+
+  .stats {
+    gap: 12px;
+  }
+
+  .stat {
+    min-width: 80px;
+    padding: 12px 16px;
+  }
+
+  .statValue {
+    font-size: 1.25rem;
+  }
+
+  .profileCard {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}

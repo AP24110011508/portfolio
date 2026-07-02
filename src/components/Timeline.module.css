@@ -1,0 +1,151 @@
+.timeline {
+  padding: 120px 24px 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.header p {
+  color: var(--color-accent-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  color: var(--color-text-primary);
+  line-height: 1.05;
+}
+
+.line {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 260px);
+  background: linear-gradient(180deg, rgba(59,130,246,0.85), rgba(139,92,246,0.2));
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.items {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 100px;
+}
+
+.item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 56px;
+}
+
+.yearBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(59,130,246,0.96), rgba(96,165,250,0.95));
+  box-shadow: 0 0 32px rgba(59,130,246,0.24);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.16);
+  z-index: 2;
+}
+
+.yearBadge span {
+  color: #ffffff;
+  font-size: clamp(24px, 2.7vw, 32px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 32px;
+  padding: 36px 32px 32px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59,130,246,0.22);
+}
+
+.year {
+  display: none;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+}
+
+@media (max-width: 1024px) {
+  .line {
+    left: 30px;
+  }
+
+  .item::before {
+    left: 30px;
+  }
+
+  .yearBadge {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .card {
+    padding-left: 88px;
+  }
+}
+
+@media (max-width: 700px) {
+  .timeline {
+    padding: 100px 18px 80px;
+  }
+
+  .line {
+    left: 20px;
+  }
+
+  .item::before {
+    left: 20px;
+  }
+
+  .yearBadge {
+    left: 20px;
+    transform: translateX(-50%);
+    min-width: 90px;
+    height: 90px;
+  }
+
+  .card {
+    padding: 24px;
+    padding-left: 80px;
+  }
+}

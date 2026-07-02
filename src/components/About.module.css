@@ -1,0 +1,161 @@
+.about {
+  padding: 120px 24px 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.header p {
+  color: var(--color-accent-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  color: var(--color-text-primary);
+  line-height: 1.05;
+}
+
+.grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr;
+  gap: 32px;
+}
+
+.story {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px);
+}
+
+.story p {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tags span {
+  display: inline-flex;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.contactBlurb {
+  padding: 24px;
+  background: rgba(59,130,246,0.08);
+  border-radius: 22px;
+  border: 1px solid rgba(59,130,246,0.15);
+}
+
+.contactBlurb h3 {
+  margin: 0 0 10px;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.contactBlurb p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.side {
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  padding: 28px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px);
+}
+
+.card span {
+  display: inline-flex;
+  color: var(--color-accent-primary);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.eduItem {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.eduItem:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.eduMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.eduMeta h4 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.eduMeta span {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.eduSchool,
+.eduInfo {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 90px 18px 80px;
+  }
+
+  .story,
+  .card {
+    padding: 24px;
+  }
+}

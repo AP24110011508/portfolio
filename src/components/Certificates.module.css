@@ -1,0 +1,81 @@
+.certificates {
+  padding: 120px 24px 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.header p {
+  color: var(--color-accent-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  color: var(--color-text-primary);
+  line-height: 1.05;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 28px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px);
+}
+
+.card span {
+  color: var(--color-accent-primary);
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  color: var(--color-text-primary);
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.card p + p {
+  margin-top: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .certificates {
+    padding: 100px 18px 80px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
