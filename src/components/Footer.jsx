@@ -11,7 +11,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.branding}>
           <p>© 2026 Koya Charan Babu</p>
-          <span>Charan Koya | Full Stack Developer</span>
+          <span>Charan Koya | Software Engineer</span>
           <small>Built by Charan Koya</small>
         </div>
 

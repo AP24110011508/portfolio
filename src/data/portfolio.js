@@ -1,7 +1,7 @@
 export const portfolioData = {
   personal: {
     name: "Koya Charan Babu",
-    title: "Full Stack Developer | AI & ML Enthusiast",
+    title: "Software Engineer | AI & ML Enthusiast",
     bio: "I am a passionate and highly motivated B.Tech Computer Science (Artificial Intelligence & Machine Learning) student at SRM University AP with a strong interest in Full Stack Development, Software Engineering, and Data Structures & Algorithms.",
     email: "charankoya8@gmail.com",
     phone: "+91 7731896885",
@@ -19,6 +19,7 @@ export const portfolioData = {
   hero: {
     greeting: "Hello, I'm",
     roles: [
+      "Software Engineer",
       "Full Stack Developer",
       "AI & ML Enthusiast",
       "Software Engineer",
